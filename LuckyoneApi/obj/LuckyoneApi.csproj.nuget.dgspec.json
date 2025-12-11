@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asp net Core\\LuckyoneApi\\LuckyoneApi.csproj": {}
+    "D:\\RahulProject\\LuckyoneApi\\LuckyoneApi\\LuckyoneApi.csproj": {}
   },
   "projects": {
-    "D:\\Asp net Core\\LuckyoneApi\\LuckyoneApi.csproj": {
+    "D:\\RahulProject\\LuckyoneApi\\LuckyoneApi\\LuckyoneApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp net Core\\LuckyoneApi\\LuckyoneApi.csproj",
+        "projectUniqueName": "D:\\RahulProject\\LuckyoneApi\\LuckyoneApi\\LuckyoneApi.csproj",
         "projectName": "LuckyoneApi",
-        "projectPath": "D:\\Asp net Core\\LuckyoneApi\\LuckyoneApi.csproj",
-        "packagesPath": "C:\\Users\\rahul\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp net Core\\LuckyoneApi\\obj\\",
+        "projectPath": "D:\\RahulProject\\LuckyoneApi\\LuckyoneApi\\LuckyoneApi.csproj",
+        "packagesPath": "C:\\Users\\RAHUL\\.nuget\\packages\\",
+        "outputPath": "D:\\RahulProject\\LuckyoneApi\\LuckyoneApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rahul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RAHUL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,12 +44,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -99,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

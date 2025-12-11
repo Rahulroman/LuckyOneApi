@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LuckyoneApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251210172204_Init")]
+    [Migration("20251211175034_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -254,7 +254,6 @@ namespace LuckyoneApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -265,7 +264,6 @@ namespace LuckyoneApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
