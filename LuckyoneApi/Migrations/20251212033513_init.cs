@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LuckyoneApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -97,7 +97,7 @@ namespace LuckyoneApi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     TransactionType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Points = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Points = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
                     TransactionFor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ReferenceId = table.Column<int>(type: "int", nullable: true),
                     Remarks = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -115,9 +115,9 @@ namespace LuckyoneApi.Migrations
                     PointWalletId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    TotalPoints = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    AvailablePoints = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    LockedPoints = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    TotalPoints = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
+                    AvailablePoints = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
+                    LockedPoints = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

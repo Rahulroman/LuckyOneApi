@@ -5,6 +5,7 @@ using LuckyoneApi.Services.IService;
 using Microsoft.EntityFrameworkCore;
 using static LuckyoneApi.DTOs.AuthDTOs;
 using LuckyoneApi.Helper;
+using System.Reflection.Metadata.Ecma335;
 
 namespace LuckyoneApi.Services.Service
 {
@@ -46,6 +47,34 @@ namespace LuckyoneApi.Services.Service
             var token = JwtHelper.GenerateJwtToken(newUser.UserId, newUser.Role);
 
             return new AuthResponse { Username = newUser.Username, Token = token };
+
+
+        }
+
+
+        public async Task<AuthResponse> login(LoginRequest loginRequest) 
+        {
+            var response = await ( from U in _context.Users
+                                   where U.Username == loginRequest.Username && U.PasswordHash == PasswordHelper.HashPassword(loginRequest.Password)
+                                   select U
+                                   ).FirstOrDefaultAsync();
+
+           if (response == null) 
+            { 
+             return null;
+            }
+
+          string token = JwtHelper.GenerateJwtToken(response.UserId , response.Role);
+
+
+            return new AuthResponse
+            {
+                UserId = response.UserId,
+                Username = response.Username,
+                Email = response.Email,
+                Role = response.Role,
+                Token = token,
+            };
 
 
         }
