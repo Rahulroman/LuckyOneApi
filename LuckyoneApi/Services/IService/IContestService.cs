@@ -5,6 +5,16 @@ namespace LuckyoneApi.Services.IService
 {
     public interface IContestService
     {
-       // Task<CreateContestRequest> createContestRequest(CreateContestRequest createContestRequest , int adminId);
+        Task<ContestResponse> createContest(CreateContestRequest createContestRequest , int adminId);
+        Task<bool> JoinContest(int contestId, int userId);
+
+        Task<bool> DeclareWinner(DeclareWinnerRequest request, int adminId);
+
+        Task<List<ContestResponse>> GetActiveContests ();
+        Task<ContestResponse> GetContestById(int contestId);
+
+        Task<List<ContestResponse>> GetUserContest(int userId);
+
+
     }
 }
