@@ -27,6 +27,7 @@ builder.Services.AddScoped<TokenHelper>();
 builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IContestService, ContestService>();
+builder.Services.AddScoped< PointService>();
 
 
 

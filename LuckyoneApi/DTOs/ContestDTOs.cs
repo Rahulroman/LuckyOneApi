@@ -36,5 +36,11 @@
             public int SlotNumber { get; set; }
         }
 
+        public class DeclareWinnerRequest
+        {
+            public int ContestId { get; set; }
+            public string WinningSlotNumber { get; set; }
+        }
+
     }
 }
