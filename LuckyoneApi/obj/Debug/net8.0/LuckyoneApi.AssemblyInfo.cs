@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LuckyoneApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94f844e1bcbe670e7702d14c57d86a02e2845cc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1805b82840b896fc41b9ab94ce632065f191f29a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LuckyoneApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LuckyoneApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
